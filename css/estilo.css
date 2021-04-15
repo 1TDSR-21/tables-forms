@@ -15,3 +15,35 @@ td {
     border: 2px solid #000;
     border-collapse: collapse;
 }
+
+th,
+td {
+    padding: 15px;
+}
+
+th {
+    text-align: left;
+}
+
+table {
+    border-spacing: 5px;
+}
+
+.img-tbl {
+    display: block;
+    width: 20%;
+    margin: auto;
+}
+
+tr:nth-child(odd) {
+    background-color: #4e3030;
+}
+
+tr:nth-child(even) {
+    background-color: #779e1d;
+}
+
+
+tr:hover {
+    background-color: #959590;
+}
