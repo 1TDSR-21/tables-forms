@@ -15,9 +15,22 @@
 
         <div>
             <form action="#" method="get">
-                Nome: <input type="text" name="txtNm" placeholder="Digite seu nome." required>
-                Profissão: <input type="text" name="txtProf" placeholder="Digite sua profissão" required>
-                <input type="submit" value="ENVIAR">
+
+                <div>
+                    <label for="idTxtNm">Nome:</label>
+                    <input type="text" name="txtNm" placeholder="Digite seu nome." id="idTxtNm"
+                        oninvalid="setCustomValidity('Este campo não pode ficar sem preenchimento!')"
+                        pattern="[a-zA-Z]+">
+                </div>
+                <div>
+                    <label for="idTxtProf">Profissão:</label>
+                    <input type="text" name="txtProf" placeholder="Digite sua profissão" id="idTxtProf"
+                        oninvalid="setCustomValidity('Este campo não pode ficar sem preenchimento!')"
+                        pattern="[a-zA-Z]+">
+                </div>
+                <div>
+                    <input type="submit" value="ENVIAR">
+                </div>
             </form>
         </div>
 
