@@ -15,7 +15,7 @@
 
         <div>
             <form action="tabela.html" method="GET">
-                <fieldset>
+                <fieldset class="info">
                     <legend>FORMULÁRIO DE CADASTRO</legend>
                     <div>
                         <label for="idTxtNm">Nome:</label>
@@ -25,14 +25,52 @@
                     </div>
                     <div>
                         <label for="idTxtProf">Profissão:</label>
-                        <input type="text" name="txtProf" placeholder="Digite sua profissão" id="idTxtProf"
+                        <input type="text" name="txtProf" placeholder="Profissão" id="idTxtProf"
                             oninvalid="setCustomValidity('Este campo não pode ficar sem preenchimento!')"
                             pattern="^[a-zA-ZáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ]{5,}$" required>
                     </div>
                     <div>
-                        <input type="submit" value="ENVIAR" onclick="alert('HELLO WORLD!')">
+                        <label for="idTxtEmail">Email:</label>
+                        <input type="email" name="txtEmail" id="idTxtEmail" placeholder="Email"
+                            oninvalid="setCustomValidity('Necessário digitar um email válido.')" required>
                     </div>
                 </fieldset>
+                <fieldset class="gen">
+                    <legend>GÊNERO</legend>
+                    <div>
+                        <label for="idRdbGenM">Masculino</label>
+                        <input type="radio" name="rdbGen" id="idRdbGenM" checked="checked" value="m">
+                    </div>
+                    <div>
+                        <label for="idRdbGenF">Feminino</label>
+                        <input type="radio" name="rdbGen" id="idRdbGenF" value="f">
+                    </div>
+                    <div>
+                        <label for="idRdbGenO">Outros</label>
+                        <input type="radio" name="rdbGen" id="idRdbGenO" value="o">
+                    </div>
+                </fieldset>
+
+                <fieldset class="endereco">
+                    <legend>ENDEREÇO</legend>
+                    <div>
+                        <label for="idSelEstado">Estados:</label>
+                        <select name="selEstado" id="idSelEstado">
+                            <option value="sp">São Paulo</option>
+                            <option value="rj">Rio Janeiro</option>
+                            <option value="am">Amazonas</option>
+                            <option value="ac">Acre</option>
+                            <option value="ro">Rondonia</option>
+                            <option value="ba">Bahia</option>
+                            <option value="0" selected="selected">Selecione uma opção</option>
+                        </select>
+                    </div>
+                </fieldset>
+
+                <div>
+                    <input type="submit" value="ENVIAR">
+                </div>
+
             </form>
         </div>
 
