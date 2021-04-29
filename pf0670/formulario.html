@@ -11,27 +11,34 @@
 <body>
     <div id="container">
 
-        <h1>FORMULÁRIO DE CADASTRO</h1>
+        <h1>EXEMPLO DE FORMULÁRIO</h1>
 
         <div>
-            <form action="#" method="get">
-
-                <div>
-                    <label for="idTxtNm">Nome:</label>
-                    <input type="text" name="txtNm" placeholder="Digite seu nome." id="idTxtNm"
-                        oninvalid="setCustomValidity('Este campo não pode ficar sem preenchimento!')"
-                        pattern="[a-zA-Z]+">
-                </div>
-                <div>
-                    <label for="idTxtProf">Profissão:</label>
-                    <input type="text" name="txtProf" placeholder="Digite sua profissão" id="idTxtProf"
-                        oninvalid="setCustomValidity('Este campo não pode ficar sem preenchimento!')"
-                        pattern="[a-zA-Z]+">
-                </div>
-                <div>
-                    <input type="submit" value="ENVIAR">
-                </div>
+            <form action="tabela.html" method="GET">
+                <fieldset>
+                    <legend>FORMULÁRIO DE CADASTRO</legend>
+                    <div>
+                        <label for="idTxtNm">Nome:</label>
+                        <input type="text" name="txtNm" placeholder="Nome" id="idTxtNm"
+                            oninvalid="setCustomValidity('Este campo não pode ficar sem preenchimento!')"
+                            pattern="^[a-zA-ZáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ]{3,}$" required>
+                    </div>
+                    <div>
+                        <label for="idTxtProf">Profissão:</label>
+                        <input type="text" name="txtProf" placeholder="Digite sua profissão" id="idTxtProf"
+                            oninvalid="setCustomValidity('Este campo não pode ficar sem preenchimento!')"
+                            pattern="^[a-zA-ZáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ]{5,}$" required>
+                    </div>
+                    <div>
+                        <input type="submit" value="ENVIAR" onclick="alert('HELLO WORLD!')">
+                    </div>
+                </fieldset>
             </form>
+        </div>
+
+        <h2>EXEMPLO DE QUERY STRING</h2>
+        <div>
+            <a href="tabela.html?validaUser=true">QUERY-STRING</a>
         </div>
     </div>
 </body>
