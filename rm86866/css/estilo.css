@@ -48,6 +48,6 @@ tr:hover {
     background-color: #959590;
 }
 
-input:invalid {
-    background-color: #dc143c;
+input:focus:invalid {
+    border: 4px solid #dc143c;
 }
